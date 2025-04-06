@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Saya</title>
+    <!-- Add Font Awesome CDN for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f06, #48c6ef);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow-x: hidden; /* Menghindari scroll horizontal */
+        }
+
+        /* Container (Profile Card) */
+        .container {
+            width: 100%;
+            max-width: 550px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: -20px;
+            box-sizing: border-box;
+        }
+
+        /* Profile Image */
+        .profile-foto {
+            width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+            max-width: 120px; /* Menetapkan ukuran maksimum agar tidak terlalu besar */
+            height: auto; /* Menjaga proporsi gambar */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #0077b6;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Name Styling */
+        .name {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Background Section with Text */
+        .background-section {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: #444;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Links Container (Social Media) */
+        .links {
+            display: flex;
+            justify-content: center; /* Align links horizontally in the center */
+            gap: 15px; /* Add space between links */
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            padding: 0 10px; /* Memberikan sedikit padding horizontal agar tidak terlalu dekat dengan tepi */
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #0077b6; /* Default background color */
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            justify-content: flex-start;
+        }
+
+        /* Social Media Icon Styling */
+        .links i {
+            margin-right: 10px;
+            font-size: 18px; /* Icon size */
+        }
+
+        /* Hover Effect on Links */
+        .links a:hover {
+            background-color: #005f8a;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Specific colors for each social media */
+        .links a:nth-child(1) {
+            background-color: #ff4fca; /* Instagram */
+        }
+
+        .links a:nth-child(2) {
+            background-color: #1877f2; /* Facebook */
+        }
+
+        .links a:nth-child(3) {
+            background-color: rgb(0, 0, 0); /* GitHub */
+        }
+
+        .links a:nth-child(4) {
+            background-color: #0e76a8; /* LinkedIn */
+        }
+
+        .links a:nth-child(5) {
+            background-color: #25d366; /* WhatsApp */
+        }
+
+        .links a:nth-child(6) {
+            background-color: #000000; /* TikTok */
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px; /* Menurunkan padding untuk layar kecil */
+            }
+
+            .profile-foto {
+                max-width: 100px; /* Ukuran gambar lebih kecil */
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .background-section {
+                padding: 20px; /* Menurunkan padding */
+                font-size: 14px; /* Mengurangi ukuran font dalam teks latar belakang */
+            }
+
+            .links a {
+                font-size: 14px; /* Ukuran font lebih kecil */
+                padding: 8px 12px;
+            }
+
+            /* Agar links tidak terpotong di layar kecil */
+            .links {
+                flex-direction: column;
+                gap: 12px; /* Memberikan sedikit ruang antar link */
+                margin-top: 15px;
+                margin-bottom: 20px; /* Memberikan jarak dari bawah */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/foto.jpg" alt="foto Profile" class="profile-foto">
+        <div class="name">Elfredo Nagur</div>
+
+        <!-- Background Section with Text -->
+        <div class="background-section">
+            <p>Saya Elfredo Nagur, lahir di Buah-bolon, Sumut. Saya lulusan D3 Teknik Telekomunikasi dari Telkom Purwokerto dan sekarang sedang lanjut S1 Teknik Informatika di STMIK Jayakarta. Dan saya juga bekerja sebagai Engineer Onsite di Lintasarta, dengan fokus mengembangkan diri di dunia teknologi.</p>
+            <div class="links">
+                <a href="https://www.instagram.com/elfredonagur" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/elfredo99" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.github.com/elnagur" target="_blank"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.linkedin.com/in/elfredo-el-345580128/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://wa.me/081310419371" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.tiktok.com/@halakhitadon" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
